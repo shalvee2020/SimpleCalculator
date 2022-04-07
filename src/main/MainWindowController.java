@@ -35,6 +35,7 @@ public class MainWindowController {
 
     @FXML
     void onNumberClicked(MouseEvent event) {
+        //get the btn id and remove the btn prefix and convert it into integer for mathematical operation
         int value = Integer.parseInt(((Pane) event.getSource()).getId().replace("btn", ""));
         lblResult.setText(Double.parseDouble(lblResult.getText()) == 0 ? String.valueOf((double) value) : String.valueOf(Double.parseDouble(lblResult.getText()) * 10 + value));
     }
